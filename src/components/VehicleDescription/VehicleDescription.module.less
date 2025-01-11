@@ -1,0 +1,40 @@
+.article {
+  gap: 1rem;
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-template-columns: 1fr;
+  width: 100%;
+
+  @media (min-width: 907.5px) {
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.article__heading {
+  color: #000000;
+  font-family: "Open Sans", serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  width: 100%;
+
+  @media (min-width: 907.5px) {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+.article__paragraph {
+  color: #000000;
+  font-family: "Open Sans", serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  width: 100%;
+
+  @media (min-width: 907.5px) {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}

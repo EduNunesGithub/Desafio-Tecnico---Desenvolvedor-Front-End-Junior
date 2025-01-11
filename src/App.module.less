@@ -1,3 +1,21 @@
+.divider {
+  display: flex;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+.divider__line {
+  border-bottom: 0.0625rem solid #e1e1e1;
+  display: flex;
+  max-width: 69.375rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.divider__line--strong {
+  border-bottom: 0.1875rem solid #333333;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -6,8 +24,12 @@
 
 .legal-text-section {
   display: flex;
-  padding: 0 1.5rem;
+  padding: 1.5rem 1.5rem;
   width: 100%;
+
+  @media (min-width: 907.5px) {
+    padding: 2.5rem 1.5rem;
+  }
 }
 
 .legal-text-section__container {
@@ -17,10 +39,38 @@
   width: 100%;
 }
 
+.light-background {
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.vehicle-description-section {
+  display: flex;
+  padding: 1.5rem 1.5rem;
+  width: 100%;
+
+  @media (min-width: 907.5px) {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+.vehicle-description-section__container {
+  display: flex;
+  max-width: 69.375rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .vehicle-section {
   display: flex;
-  padding: 0 1.5rem;
+  padding: 1.5rem 1.5rem;
   width: 100%;
+
+  @media (min-width: 907.5px) {
+    padding: 2.5rem 1.5rem;
+  }
 }
 
 .vehicle-section__container {
