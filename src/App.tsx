@@ -1,4 +1,5 @@
 import { clsx } from "clsx";
+import { Breadcrumbs } from "./components/Breadcrumbs/Breadcrumbs";
 import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import { LegalText } from "./components/LegalText/LegalText";
@@ -12,6 +13,12 @@ const App = () => (
     <Header />
 
     <main className={styles.main}>
+      <section className={styles["breadcrumbs-section"]}>
+        <div className={styles["breadcrumbs-section__container"]}>
+          <Breadcrumbs />
+        </div>
+      </section>
+
       <section className={styles["vehicle-section"]}>
         <div className={styles["vehicle-section__container"]}>
           <Vehicle />
