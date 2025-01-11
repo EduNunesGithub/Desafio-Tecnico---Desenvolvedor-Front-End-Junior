@@ -1,8 +1,16 @@
 import React from "react";
+import { useQuery } from "@tanstack/react-query";
+import Skeleton from "react-loading-skeleton";
+import { api } from "../../lib/api/api";
 import styles from "./Footer.module.less";
 
 export const Footer = () => {
   const id = React.useId();
+
+  const { data, status } = useQuery({
+    queryKey: ["company"],
+    queryFn: api.company,
+  });
 
   return (
     <div className={styles.container}>
@@ -73,15 +81,25 @@ export const Footer = () => {
 
         <address className={styles.footer__address}>
           <span>
-            <strong>Razão Social:</strong> AUTO FORCE PLATAFORMA DE MARKETING
-            DIGITAL LTDA
+            {status === "success" ?
+              <>
+                <strong>Razão Social:</strong> {data.company_name}
+              </>
+            : <Skeleton count={0.25} />}
           </span>
           <span>
-            <strong>CNPJ:</strong> 22.588.947/0001-06
+            {status === "success" ?
+              <>
+                <strong>CNPJ:</strong> {data.cnpj}
+              </>
+            : <Skeleton count={0.25} />}
           </span>
           <span>
-            <strong>Endereço Matriz:</strong> Av. Prudente de Morais, 3966,
-            Lagoa Nova. Natal/RN – CEP 59056-200
+            {status === "success" ?
+              <>
+                <strong>Endereço Matriz:</strong> {data.address}
+              </>
+            : <Skeleton count={0.25} />}
           </span>
         </address>
 

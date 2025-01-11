@@ -16,7 +16,7 @@ export const LegalText = () => {
       </h2>
 
       <p className={styles.article__paragraph}>
-        {status === "success" ? data.legal_text : <Skeleton count={2} />}
+        {status === "success" ? data.legal_text : <Skeleton count={3} />}
       </p>
     </article>
   );

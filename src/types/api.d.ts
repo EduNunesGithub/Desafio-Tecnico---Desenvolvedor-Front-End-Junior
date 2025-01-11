@@ -1,6 +1,14 @@
 export {};
 
 declare global {
+  type Company = {
+    address: string;
+    cnpj: string;
+    company_name: string;
+    phone: string;
+    whatsapp: string;
+  };
+
   type Vehicle = {
     features: {
       consumption: string;

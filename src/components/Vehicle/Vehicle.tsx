@@ -37,7 +37,7 @@ export const Vehicle = () => {
       <img
         alt=""
         className={styles.article__image}
-        src={status === "success" ? "/Car.webp" : undefined}
+        src={status === "success" ? data.image : undefined}
       />
 
       <article className={styles.highlights}>
