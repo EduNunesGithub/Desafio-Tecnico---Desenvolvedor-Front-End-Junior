@@ -2,6 +2,7 @@ import { clsx } from "clsx";
 import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import { LegalText } from "./components/LegalText/LegalText";
+import { Showcase } from "./components/Showcase/Showcase";
 import { Vehicle } from "./components/Vehicle/Vehicle";
 import { VehicleDescription } from "./components/VehicleDescription/VehicleDescription";
 import styles from "./App.module.less";
@@ -30,6 +31,16 @@ const App = () => (
         <section className={styles["vehicle-description-section"]}>
           <div className={styles["vehicle-description-section__container"]}>
             <VehicleDescription />
+          </div>
+        </section>
+
+        <div className={styles.divider}>
+          <div className={styles.divider__line} />
+        </div>
+
+        <section className={styles["showcase-section"]}>
+          <div className={styles["showcase-section__container"]}>
+            <Showcase />
           </div>
         </section>
 
