@@ -1,3 +1,4 @@
+import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import { LegalText } from "./components/LegalText/LegalText";
 import { Vehicle } from "./components/Vehicle/Vehicle";
@@ -20,6 +21,8 @@ const App = () => (
         </div>
       </section>
     </main>
+
+    <Footer />
   </>
 );
 
