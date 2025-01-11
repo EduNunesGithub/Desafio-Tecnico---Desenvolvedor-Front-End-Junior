@@ -1,24 +1,26 @@
-import { useState } from "react";
 import { Header } from "./components/Header/Header";
+import { LegalText } from "./components/LegalText/LegalText";
 import { Vehicle } from "./components/Vehicle/Vehicle";
 import styles from "./App.module.less";
 
-function App() {
-  const [count, setCount] = useState(0);
+const App = () => (
+  <>
+    <Header />
 
-  return (
-    <>
-      <Header />
+    <main className={styles.main}>
+      <section className={styles["vehicle-section"]}>
+        <div className={styles["vehicle-section__container"]}>
+          <Vehicle />
+        </div>
+      </section>
 
-      <main className={styles.main}>
-        <section className={styles["vehicle-section"]}>
-          <div className={styles["vehicle-section__container"]}>
-            <Vehicle />
-          </div>
-        </section>
-      </main>
-    </>
-  );
-}
+      <section className={styles["legal-text-section"]}>
+        <div className={styles["legal-text-section__container"]}>
+          <LegalText />
+        </div>
+      </section>
+    </main>
+  </>
+);
 
 export default App;
