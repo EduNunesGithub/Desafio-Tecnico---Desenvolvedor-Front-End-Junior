@@ -20,7 +20,9 @@ export const Header = () => {
             <img
               alt="Dealer"
               className={styles.logos__dealer}
+              height={32}
               src="/Dealer Logo.svg"
+              width={180}
             />
           </a>
 
@@ -29,7 +31,9 @@ export const Header = () => {
           <img
             alt="BMW"
             className={styles.logos__bmw}
+            height={48}
             src="/BMW Logo.svg"
+            width={48}
           />
         </div>
 

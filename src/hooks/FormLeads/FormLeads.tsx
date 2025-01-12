@@ -32,7 +32,7 @@ const schema = zod.object({
 });
 
 export const useFormLeads: UseFormLeads = () => {
-  const { formState, handleSubmit, register, watch } = useForm<FormLeads>({
+  const { formState, handleSubmit, register } = useForm<FormLeads>({
     defaultValues: {
       "e-mail": "",
       name: "",

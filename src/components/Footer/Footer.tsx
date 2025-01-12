@@ -22,17 +22,19 @@ export const Footer = () => {
           <img
             alt="Dealer"
             className={styles.link__logo}
+            height={24}
             src="/Dealer Logo White.svg"
+            width={130}
           />
         </a>
 
         <article className={styles.social}>
-          <h4
+          <span
             className={styles.social__heading}
             id={id}
           >
             SIGA-NOS:
-          </h4>
+          </span>
 
           <ul
             aria-labelledby={id}
@@ -40,6 +42,7 @@ export const Footer = () => {
           >
             <li className={styles["social-links__list-item"]}>
               <a
+                aria-label="Ir para Instagram"
                 className={styles["social-links__anchor"]}
                 href="https://www.instagram.com/autoforcebr/"
                 target="_blank"
@@ -53,6 +56,7 @@ export const Footer = () => {
             </li>
             <li className={styles["social-links__list-item"]}>
               <a
+                aria-label="Ir para LinkedIn"
                 className={styles["social-links__anchor"]}
                 href="https://www.linkedin.com/company/autoforcebrasil/?originalSubdomain=br"
                 target="_blank"
@@ -66,6 +70,7 @@ export const Footer = () => {
             </li>
             <li className={styles["social-links__list-item"]}>
               <a
+                aria-label="Ir para YouTube"
                 className={styles["social-links__anchor"]}
                 href="https://www.youtube.com/channel/UCLI4tg1oh_oLiJJteExJdUQ"
                 target="_blank"
@@ -111,7 +116,9 @@ export const Footer = () => {
         <img
           alt="Autoforce"
           className={styles["footer__af-logo"]}
+          height={32}
           src="AF Logo.svg"
+          width={80}
         />
 
         <div className={styles.footer__copyright}>

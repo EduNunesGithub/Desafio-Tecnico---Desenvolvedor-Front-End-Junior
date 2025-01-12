@@ -18,6 +18,7 @@ export const Showcase = () => {
           allowFullScreen
           className={styles["video-container__image"]}
           height="315"
+          loading="lazy"
           referrerPolicy="strict-origin-when-cross-origin"
           src={status === "success" ? data.video : undefined}
           title="YouTube video player"
