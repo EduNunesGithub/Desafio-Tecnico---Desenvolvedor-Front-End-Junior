@@ -41,7 +41,8 @@ export const Footer = () => {
             <li className={styles["social-links__list-item"]}>
               <a
                 className={styles["social-links__anchor"]}
-                href=""
+                href="https://www.instagram.com/autoforcebr/"
+                target="_blank"
               >
                 <img
                   alt=""
@@ -53,7 +54,8 @@ export const Footer = () => {
             <li className={styles["social-links__list-item"]}>
               <a
                 className={styles["social-links__anchor"]}
-                href=""
+                href="https://www.linkedin.com/company/autoforcebrasil/?originalSubdomain=br"
+                target="_blank"
               >
                 <img
                   alt=""
@@ -65,7 +67,8 @@ export const Footer = () => {
             <li className={styles["social-links__list-item"]}>
               <a
                 className={styles["social-links__anchor"]}
-                href=""
+                href="https://www.youtube.com/channel/UCLI4tg1oh_oLiJJteExJdUQ"
+                target="_blank"
               >
                 <img
                   alt=""
