@@ -1,22 +1,29 @@
+import { useQuery } from "@tanstack/react-query";
+import { api } from "../../lib/api/api";
 import styles from "./Showcase.module.less";
 
-export const Showcase = () => (
-  <article className={styles.article}>
-    <h2 className={styles.article__heading}>Conheça o BMW Série 4 Cabrio</h2>
+export const Showcase = () => {
+  const { data, status } = useQuery({
+    queryKey: ["vehicle"],
+    queryFn: api.vehicle,
+  });
 
-    <div className={styles["video-container"]}>
-      <img
-        alt=""
-        className={styles["video-container__image"]}
-        src="/Car 2.webp"
-      />
+  return (
+    <article className={styles.article}>
+      <h2 className={styles.article__heading}>Conheça o BMW Série 4 Cabrio</h2>
 
-      <button className={styles["video-container__button"]}>
-        <img
-          alt="Play"
-          src="/Icon Play.svg"
+      <div className={styles["video-container"]}>
+        <iframe
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+          className={styles["video-container__image"]}
+          height="315"
+          referrerPolicy="strict-origin-when-cross-origin"
+          src={status === "success" ? data.video : undefined}
+          title="YouTube video player"
+          width="560"
         />
-      </button>
-    </div>
-  </article>
-);
+      </div>
+    </article>
+  );
+};
