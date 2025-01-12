@@ -10,6 +10,10 @@ declare global {
   };
 
   type Vehicle = {
+    description: {
+      heading: string;
+      paragraph: string;
+    };
     features: {
       consumption: string;
       engine: string;
