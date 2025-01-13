@@ -8,7 +8,7 @@
 }
 
 .container__error {
-  color: #ff5050;
+  color: var(--red-01);
   font-family: "Ubuntu", serif;
   font-size: 0.75rem;
   font-weight: 700;
@@ -18,9 +18,9 @@
 
 .container__input {
   background-color: transparent;
-  border: 0.0625rem solid #333333;
+  border: 0.0625rem solid var(--gray-02);
   border-radius: 0.5rem;
-  color: #000000;
+  color: var(--black-01);
   display: flex;
   font-family: "Ubuntu", serif;
   font-size: 0.75rem;
@@ -31,20 +31,20 @@
   width: 100%;
 
   &::placeholder {
-    color: #666666;
+    color: var(--gray-01);
   }
 }
 
 .container__input--error {
-  border-color: #ff5050;
+  border-color: var(--red-01);
 
   &:focus {
-    outline-color: #ff5050;
+    outline-color: var(--red-01);
   }
 }
 
 .container__span {
-  color: #000000;
+  color: var(--black-01);
   font-family: "Ubuntu", serif;
   font-size: 0.75rem;
   font-weight: 700;
