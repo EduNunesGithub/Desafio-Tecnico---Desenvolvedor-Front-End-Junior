@@ -4,6 +4,7 @@ import {
   useForm,
   UseFormHandleSubmit,
   UseFormRegister,
+  UseFormReset,
 } from "react-hook-form";
 import * as zod from "zod";
 
@@ -15,6 +16,7 @@ export type UseFormLeadsObject = {
   formState: FormState<FormLeads>;
   handleSubmit: UseFormHandleSubmit<FormLeads, undefined>;
   register: UseFormRegister<FormLeads>;
+  reset: UseFormReset<FormLeads>;
 };
 
 const schema = zod.object({
@@ -32,7 +34,7 @@ const schema = zod.object({
 });
 
 export const useFormLeads: UseFormLeads = () => {
-  const { formState, handleSubmit, register } = useForm<FormLeads>({
+  const { formState, handleSubmit, register, reset } = useForm<FormLeads>({
     defaultValues: {
       "e-mail": "",
       name: "",
@@ -45,5 +47,6 @@ export const useFormLeads: UseFormLeads = () => {
     formState,
     handleSubmit,
     register,
+    reset,
   };
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import Skeleton from "react-loading-skeleton";
+import { Link } from "react-router";
 import { api } from "../../lib/api/api";
 import styles from "./Footer.module.less";
 
@@ -15,9 +16,9 @@ export const Footer = () => {
   return (
     <div className={styles.container}>
       <footer className={styles.footer}>
-        <a
+        <Link
           className={styles.link}
-          href="/"
+          to="/"
         >
           <img
             alt="Dealer"
@@ -26,7 +27,7 @@ export const Footer = () => {
             src="/Dealer Logo White.svg"
             width={130}
           />
-        </a>
+        </Link>
 
         <article className={styles.social}>
           <span

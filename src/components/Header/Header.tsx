@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { Link } from "react-router";
 import { api } from "../../lib/api/api";
 import { Button } from "../Button/Button";
 import styles from "./Header.module.less";
@@ -13,9 +14,9 @@ export const Header = () => {
     <div className={styles.container}>
       <header className={styles.header}>
         <div className={styles.logos}>
-          <a
+          <Link
             className={styles.logos__link}
-            href="/"
+            to="/"
           >
             <img
               alt="Dealer"
@@ -24,7 +25,7 @@ export const Header = () => {
               src="/Dealer Logo.svg"
               width={180}
             />
-          </a>
+          </Link>
 
           <div className={styles.logos__decoration} />
 

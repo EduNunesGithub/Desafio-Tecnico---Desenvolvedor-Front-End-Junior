@@ -8,17 +8,20 @@ import {
 } from "@headlessui/react";
 import { clsx } from "clsx";
 import { useFormLeads } from "../../hooks/FormLeads/FormLeads";
+import { Leads } from "../../lib/leads/leads";
 import { Button } from "../Button/Button";
 import { TextField } from "../TextField/TextField";
 import styles from "./AttractingLeads.module.less";
 
 export type AttractingLeadsProps = DialogProps;
 
+const leads = new Leads();
+
 export const AttractingLeads = ({
   onClose,
   ...props
 }: AttractingLeadsProps) => {
-  const { formState, handleSubmit, register } = useFormLeads();
+  const { formState, handleSubmit, register, reset } = useFormLeads();
 
   return (
     <Dialog
@@ -52,7 +55,9 @@ export const AttractingLeads = ({
 
           <form
             className={styles.form}
-            onSubmit={handleSubmit(() => {
+            onSubmit={handleSubmit((data) => {
+              leads.newLead(data);
+              reset();
               alert("Done!");
               onClose(true);
             })}
