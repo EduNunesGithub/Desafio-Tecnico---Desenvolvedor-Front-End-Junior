@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import Skeleton from "react-loading-skeleton";
 import { api } from "../../lib/api/api";
@@ -8,7 +8,7 @@ import { Highlight } from "./Highlight/Highlight";
 import styles from "./Vehicle.module.less";
 
 export const Vehicle = () => {
-  const [modalLeads, setModalLeads] = React.useState<boolean>(false);
+  const [modalLeads, setModalLeads] = useState<boolean>(false);
 
   const { data, status } = useQuery({
     queryKey: ["vehicle"],
@@ -42,7 +42,9 @@ export const Vehicle = () => {
         <img
           alt=""
           className={styles.article__image}
-          src={status === "success" ? data.image : undefined}
+          sizes="(min-width: 907.px) 720px, 360px"
+          src={status === "success" ? data.image.desktop : undefined}
+          srcSet={`(${status === "success" && data.image.mobile}) 360w, ${status === "success" && data.image.desktop} 720w`}
         />
 
         <article className={styles.highlights}>

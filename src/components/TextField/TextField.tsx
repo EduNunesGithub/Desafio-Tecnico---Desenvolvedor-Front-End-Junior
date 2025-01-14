@@ -1,4 +1,4 @@
-import React from "react";
+import { forwardRef } from "react";
 import { InputMask, InputMaskProps } from "@react-input/mask";
 import { clsx } from "clsx";
 import styles from "./TextField.module.less";
@@ -21,7 +21,7 @@ export type TextFieldProps = InputMaskProps & {
   >;
 };
 
-export const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
+export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
   (
     {
       className,

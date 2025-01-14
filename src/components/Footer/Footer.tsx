@@ -1,4 +1,4 @@
-import React from "react";
+import { useId } from "react";
 import { useQuery } from "@tanstack/react-query";
 import Skeleton from "react-loading-skeleton";
 import { Link } from "react-router";
@@ -6,7 +6,7 @@ import { api } from "../../lib/api/api";
 import styles from "./Footer.module.less";
 
 export const Footer = () => {
-  const id = React.useId();
+  const id = useId();
 
   const { data, status } = useQuery({
     queryKey: ["company"],

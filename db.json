@@ -18,7 +18,10 @@
       "speed": "154 km/h"
     },
     "id": 1,
-    "image": "https://raw.githubusercontent.com/EduNunesGithub/Desafio-Tecnico---Desenvolvedor-Front-End-Junior/refs/heads/main/public/Car.webp",
+    "image": {
+      "mobile": "https://raw.githubusercontent.com/EduNunesGithub/Desafio-Tecnico---Desenvolvedor-Front-End-Junior/refs/heads/main/public/Car-Small.webp",
+      "desktop": "https://raw.githubusercontent.com/EduNunesGithub/Desafio-Tecnico---Desenvolvedor-Front-End-Junior/refs/heads/main/public/Car.webp"
+    },
     "legal_text": "Virtus 1.0, 4 portas (cód. BZ23B3), ano/modelo 18/18 à vista a partir deR$ 73490 ou financiado com entrada de R$ 44094 (60%) e mais 24 prestaçõesmensais de R$ 1286. Taxa de juros: 0% a.m. e 0% a.a. Total da operação: R$74958. CET máximo para esta operação: 04,75%% a.a. Condições válidas parafinanciamento pelo Banco Volkswagen. Oferta válida exclusivamente para acidade de Natal / RN, no período de 30/09/2018 a 31/10/2018 para veículoscom pintura sólida.",
     "name": "BMW Série 4 Cabrio",
     "price": 179950,

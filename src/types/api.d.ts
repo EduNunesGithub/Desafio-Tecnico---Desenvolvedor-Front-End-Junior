@@ -21,7 +21,10 @@ declare global {
       speed: string;
     };
     id: number;
-    image: string;
+    image: {
+      desktop: string;
+      mobile: string;
+    };
     legal_text: string;
     name: string;
     price: number;
