@@ -67,7 +67,7 @@ export const AttractingLeads = ({
               disableMask
               error={formState.errors.name?.message}
               label="Nome"
-              placeholder="e.g Beorththae"
+              placeholder="Ex. Amanda Oliveira"
             />
 
             <TextField
@@ -75,7 +75,7 @@ export const AttractingLeads = ({
               disableMask
               error={formState.errors["e-mail"]?.message}
               label="E-mail"
-              placeholder="e.g beorththae@email.com"
+              placeholder="Ex. amandaoliveira@email.com"
             />
 
             <TextField
@@ -83,7 +83,7 @@ export const AttractingLeads = ({
               error={formState.errors.phone?.message}
               label="Telefone"
               mask="(__) _ ____-____"
-              placeholder="e.g (12) 9 1234-5678"
+              placeholder="Ex. (99) 9 9999-9999"
               replacement={{ _: /\d/ }}
             />
 
