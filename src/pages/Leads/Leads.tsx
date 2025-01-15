@@ -10,7 +10,7 @@ export const Leads = () => {
     <main className={styles.main}>
       <section className={styles.section}>
         <article className={styles.article}>
-          <h1 className={styles.article__heading}>Contactos Captados</h1>
+          <h1 className={styles.article__heading}>Contatos Captados</h1>
 
           <table className={styles.table}>
             <thead className={styles.table__thead}>
