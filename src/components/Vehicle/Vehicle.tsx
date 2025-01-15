@@ -39,13 +39,24 @@ export const Vehicle = () => {
           }
         </span>
 
-        <img
-          alt=""
-          className={styles.article__image}
-          sizes="(min-width: 907.px) 720px, 360px"
-          src={status === "success" ? data.image.desktop : undefined}
-          srcSet={`(${status === "success" && data.image.mobile}) 360w, ${status === "success" && data.image.desktop} 720w`}
-        />
+        {status === "success" ?
+          <picture>
+            <source
+              media="(min-width: 907.5px)"
+              srcSet={data.image.desktop}
+            />
+            <source
+              media="(min-width: 0px)"
+              srcSet={data.image.mobile}
+            />
+
+            <img
+              alt=""
+              className={styles.article__image}
+              src={data.image.desktop}
+            />
+          </picture>
+        : <div className={styles["article__image-placeholder"]} />}
 
         <article className={styles.highlights}>
           <h3 className={styles.highlights__heading}>Destaques</h3>
