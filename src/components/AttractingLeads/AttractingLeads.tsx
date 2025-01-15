@@ -7,6 +7,7 @@ import {
   DialogTitle,
 } from "@headlessui/react";
 import { clsx } from "clsx";
+import { toast } from "react-toastify";
 import { useFormLeads } from "../../hooks/FormLeads/FormLeads";
 import { Leads } from "../../lib/leads/leads";
 import { Button } from "../Button/Button";
@@ -22,6 +23,9 @@ export const AttractingLeads = ({
   ...props
 }: AttractingLeadsProps) => {
   const { formState, handleSubmit, register, reset } = useFormLeads();
+
+  const notify = () =>
+    toast(`Feito! Visite ${window.location}/leads para visualizar os contatos`);
 
   return (
     <Dialog
@@ -58,7 +62,7 @@ export const AttractingLeads = ({
             onSubmit={handleSubmit((data) => {
               leads.newLead(data);
               reset();
-              alert("Done!");
+              notify();
               onClose(true);
             })}
           >

@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router";
+import { ToastContainer } from "react-toastify";
 import App from "./App.tsx";
 import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
@@ -31,6 +32,8 @@ createRoot(document.getElementById("root")!).render(
 
         <Footer />
       </BrowserRouter>
+
+      <ToastContainer />
     </QueryClientProvider>
   </StrictMode>,
 );
