@@ -33,13 +33,13 @@ Durante o desenvolvimento deste projeto, algumas decisões técnicas foram tomad
 #### Retorna dados da empresa
 
 ```http
-GET https://my-json-server.typicode.com/EduNunesGithub/Desafio-Tecnico---Desenvolvedor-Front-End-Junior/company
+GET https://rails-api-challenge-damp-feather-1837.fly.dev/companies/1
 ```
 
 #### Retorna dados do veículo
 
 ```http
-GET https://my-json-server.typicode.com/EduNunesGithub/Desafio-Tecnico---Desenvolvedor-Front-End-Junior/vehicle
+GET https://rails-api-challenge-damp-feather-1837.fly.dev/vehicles/1
 ```
 
 ## Rodando localmente
